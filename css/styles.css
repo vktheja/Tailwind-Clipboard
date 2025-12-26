@@ -1,22 +1,14 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(93.6% 0.032 17.717);
-    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --default-font-family: var(--font-sans);
+    --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-black: #000;
     --default-mono-font-family: var(--font-mono);
   }
 }
@@ -31,9 +23,9 @@
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
-    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
-    font-feature-settings: var(--default-font-feature-settings, normal);
-    font-variation-settings: var(--default-font-variation-settings, normal);
+    font-family: Bai Jamjuree, sans-serif;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
   }
   hr {
@@ -169,63 +161,27 @@
   }
 }
 @layer utilities {
-  .table {
-    display: table;
+  .bg-black {
+    background-color: var(--color-black);
   }
-  .border-collapse {
-    border-collapse: collapse;
+  .sm\:bg-red-500 {
+    @media (width >= 480px) {
+      background-color: var(--color-red-500);
+    }
   }
-  .resize {
-    resize: both;
+  .md\:bg-blue-500 {
+    @media (width >= 768px) {
+      background-color: var(--color-blue-500);
+    }
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .lg\:bg-yellow-500 {
+    @media (width >= 976px) {
+      background-color: var(--color-yellow-500);
+    }
   }
-  .bg-red-100 {
-    background-color: var(--color-red-100);
-  }
-  .bg-red-300 {
-    background-color: var(--color-red-300);
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .text-red-500 {
-    color: var(--color-red-500);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
+  .xl\:bg-green-500 {
+    @media (width >= 1440px) {
+      background-color: var(--color-green-500);
     }
   }
 }
