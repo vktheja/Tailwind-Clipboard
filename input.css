@@ -16,7 +16,11 @@
     @apply max-w-6xl mx-auto text-center px-10;
   }
 
-  .button-container {
+  .section-content {
+    @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
+  }
+
+  .button-link {
     @apply p-4 px-8 rounded-full shadow-lg duration-200 hover:opacity-80;
   }
 }
